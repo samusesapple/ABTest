@@ -1,7 +1,7 @@
-# ABTest
+# RemoteConfig
 ### 목적
 ---
-Firebase를 이용한 RemoteConfig, AB Test 기능 학습 및 구현
+Firebase를 이용한 RemoteConfig 기능 학습
 <br>
 <br>
 
@@ -99,6 +99,24 @@ Firebase를 이용한 RemoteConfig, AB Test 기능 학습 및 구현
 #### 한글 / 영어
 <img width="200" alt="image" src="https://github.com/samusesapple/ABTest/assets/126672733/27c940ea-62c4-4e83-95c6-2c51fda1f957">
 <img width="200" alt="image" src="https://github.com/samusesapple/ABTest/assets/126672733/8790e1f0-27b7-4e2f-8174-edc65b8bbe4b">
+<br>
+<br>
 
+#AB Test
+### 목적
+---
+Firebase를 이용한 AB Test 학습
+<br>
+<br>
+
+### Test 주제
+메세지 문구에 따른 사용자의 확인버튼 탭 빈도수 비교 실험
+<br>
+<br>
+
+### 실험 비교 케이스 선정
+<img width="787" alt="image" src="https://github.com/samusesapple/RemoteConfig-ABTest/assets/126672733/a89e7e23-927a-419c-b4fa-148c22ab41ab">
+
+  
 
 
