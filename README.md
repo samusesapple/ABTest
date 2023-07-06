@@ -5,7 +5,7 @@ Firebase를 이용한 App 구성 요소 제어, AB Test 기능 학습 및 구현
 <br>
 <br>
 
-#### 제어 대상
+#### 제어 대상
 ---
 1. MainVC: NoticeVC present 여부
 2. NoticeVC.xib : titleLabel.text, detailLabel.text, dateLabel.text 제어
