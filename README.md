@@ -1,20 +1,26 @@
 # ABTest
-#### 목적
+### 목적
 ---
-Firebase를 이용한 App 구성 요소 제어, AB Test 기능 학습 및 구현
+Firebase를 이용한 RemoteConfig, AB Test 기능 학습 및 구현
 <br>
 <br>
 
-#### 제어 대상
+### 제어 대상
 ---
 1. MainVC: NoticeVC present 여부
 2. NoticeVC.xib : titleLabel.text, detailLabel.text, dateLabel.text 제어
 <br>
 <br>
 
-#### 로직
+### 조건 설정 
 ---
-1. MainVC
+<img width="676" alt="image" src="https://github.com/samusesapple/ABTest/assets/126672733/6d44661f-eb2d-4cad-8f10-ba8299c4f605">
+<br>
+<br>
+
+### 제어 로직
+---
+#### 1. MainVC
    ```
     func setRemoteConfigFromFirebase() {
         guard let remoteConfig = remoteConfig else { return }
@@ -57,7 +63,7 @@ Firebase를 이용한 App 구성 요소 제어, AB Test 기능 학습 및 구현
     }
    ```
 
-2. NoticeVC
+#### 2. NoticeVC
       ```
       var noticeContents: (title: String, detail: String, date: String)?
       // title, detail, date
@@ -82,4 +88,17 @@ Firebase를 이용한 App 구성 요소 제어, AB Test 기능 학습 및 구현
           detailLabel.text = noticeContents.detail
           dateLabel.text = noticeContents.date
       }
-  
+<br>
+<br>
+
+### 제어 결과
+---
+#### xib 파일
+<img width="188" alt="image" src="https://github.com/samusesapple/ABTest/assets/126672733/c3efa5a1-de5e-4690-9872-4f4adef1f721">
+
+#### 한글 / 영어
+<img width="200" alt="image" src="https://github.com/samusesapple/ABTest/assets/126672733/27c940ea-62c4-4e83-95c6-2c51fda1f957">
+<img width="200" alt="image" src="https://github.com/samusesapple/ABTest/assets/126672733/8790e1f0-27b7-4e2f-8174-edc65b8bbe4b">
+
+
+
