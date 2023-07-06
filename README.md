@@ -14,7 +14,7 @@ Firebase를 이용한 App 구성 요소 제어, AB Test 기능 학습 및 구현
 
 ### 제어 로직
 ---
-1. MainVC
+#### 1. MainVC
    ```
     func setRemoteConfigFromFirebase() {
         guard let remoteConfig = remoteConfig else { return }
@@ -57,7 +57,7 @@ Firebase를 이용한 App 구성 요소 제어, AB Test 기능 학습 및 구현
     }
    ```
 
-2. NoticeVC
+#### 2. NoticeVC
       ```
       var noticeContents: (title: String, detail: String, date: String)?
       // title, detail, date
