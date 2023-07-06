@@ -1,0 +1,6 @@
+framework module Pods_Notice_ABTest {
+  umbrella header "Pods-Notice_ABTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

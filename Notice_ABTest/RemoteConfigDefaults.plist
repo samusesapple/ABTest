@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>isHidden</key>
+	<true/>
+	<key>title</key>
+	<string>주목!?</string>
+	<key>detail</key>
+	<string>현재는 디폴트 값이 들어간 상태 입니다.</string>
+	<key>date</key>
+	<string>2023년 7월 6일(목) 18:00-20:00 (2시간)</string>
+</dict>
+</plist>
