@@ -101,8 +101,9 @@ Firebase를 이용한 RemoteConfig 기능 학습
 <img width="200" alt="image" src="https://github.com/samusesapple/ABTest/assets/126672733/8790e1f0-27b7-4e2f-8174-edc65b8bbe4b">
 <br>
 <br>
+<br>
 
-#AB Test
+# AB Test
 ### 목적
 ---
 Firebase를 이용한 AB Test 학습
