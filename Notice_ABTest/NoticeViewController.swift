@@ -10,7 +10,7 @@ import UIKit
 class NoticeViewController: UIViewController {
     
     var noticeContents: (title: String, detail: String, date: String)?
-    // title, detail, date
+// title, detail, date
     @IBOutlet var noticeView: UIView!
     
     @IBOutlet weak var titleLabel: UILabel!

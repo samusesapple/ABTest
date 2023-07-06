@@ -29,46 +29,40 @@
                             <rect key="frame" x="20" y="20.000000000000028" width="260" height="360"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqw-nj-XlQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="260" height="27.333333333333332"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="32"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주목" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auB-Js-ofa">
-                                    <rect key="frame" x="0.0" y="37.333333333333314" width="260" height="54.666666666666657"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주목" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="auB-Js-ofa">
+                                    <rect key="frame" x="0.0" y="41.999999999999993" width="260" height="64.333333333333314"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재는 디폴트 값이 들어간 상태 입니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roH-1D-RWx">
-                                    <rect key="frame" x="0.0" y="102" width="260" height="93"/>
+                                    <rect key="frame" x="0.0" y="116.33333333333331" width="260" height="67"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="적용 일시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0og-KM-Km4">
-                                    <rect key="frame" x="0.0" y="205" width="260" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="to8-ve-APi"/>
-                                    </constraints>
+                                    <rect key="frame" x="0.0" y="193.33333333333331" width="260" height="28.333333333333343"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023년 7월 6일(목) 18:00-20:00 (2시간)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWf-89-vi3">
-                                    <rect key="frame" x="0.0" y="245" width="260" height="60"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="60" id="Dxf-L7-g51"/>
-                                    </constraints>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023년 7월 6일(목) 18:00-20:00 (2시간)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yWf-89-vi3">
+                                    <rect key="frame" x="0.0" y="231.66666666666666" width="260" height="58.333333333333343"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQ5-R7-hei">
-                                    <rect key="frame" x="0.0" y="314.99999999999994" width="260" height="45"/>
+                                    <rect key="frame" x="0.0" y="299.99999999999994" width="260" height="60"/>
                                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="45" id="A8A-wt-Ths"/>
+                                        <constraint firstAttribute="height" constant="60" id="A8A-wt-Ths"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

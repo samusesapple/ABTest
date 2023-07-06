@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseRemoteConfig
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
 
@@ -23,12 +24,16 @@ class ViewController: UIViewController {
         // set remoteConfig's setting
         remoteConfig?.configSettings = setting
         
-        // set default value with plist
+        // set default value
         remoteConfig?.setDefaults(fromPlist: "RemoteConfigDefaults")
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         setRemoteConfigFromFirebase()
     }
 }
+
+// MARK: - Remote Configure
 
 extension ViewController {
     func setRemoteConfigFromFirebase() {
@@ -62,11 +67,49 @@ extension ViewController {
                 noticeVC.noticeContents = (title, detail, date)
                 
                 self.present(noticeVC, animated: true)
+                return
             }
+            presentEventAlert()
         }
     }
     
     func isNoticeHidden(_ remoteConfig: RemoteConfig) -> Bool {
         return remoteConfig["isHidden"].boolValue
+    }
+}
+
+// MARK: - AB TEST
+
+extension ViewController {
+    func presentEventAlert() {
+        guard let remoteConfig = remoteConfig else { return }
+        
+        remoteConfig.fetch { status, _ in
+            switch status {
+            case .success:
+                remoteConfig.activate()
+            case .failure:
+                print("ERROR: Failed fetching remoteConfig")
+            default:
+                break
+            }
+            
+            
+            let message = remoteConfig["message"].stringValue ?? ""
+            let alert = UIAlertController(title: "깜짝 이벤트",
+                                          message: message,
+                                          preferredStyle: .alert)
+            
+            let confirmAction = UIAlertAction(title: "확인하기",
+                                              style: .default) { _ in
+                Analytics.logEvent("event_message", parameters: nil)
+            }
+            let cancelAction = UIAlertAction(title: "취소",
+                                             style: .cancel)
+            
+            [confirmAction, cancelAction].forEach(alert.addAction)
+            
+            self.present(alert, animated: true)
+        }
     }
 }

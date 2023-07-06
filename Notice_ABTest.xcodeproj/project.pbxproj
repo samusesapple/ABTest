@@ -91,12 +91,12 @@
 				F1B2BD222A56AFCB00D61EF8 /* AppDelegate.swift */,
 				F1B2BD242A56AFCB00D61EF8 /* SceneDelegate.swift */,
 				F1B2BD262A56AFCB00D61EF8 /* ViewController.swift */,
+				F1B2BD3C2A56B67400D61EF8 /* RemoteConfigDefaults.plist */,
 				F1B2BD362A56AFF200D61EF8 /* NoticeViewController.swift */,
 				F1B2BD372A56AFF200D61EF8 /* NoticeViewController.xib */,
 				F1B2BD282A56AFCB00D61EF8 /* Main.storyboard */,
 				F1B2BD2B2A56AFCC00D61EF8 /* Assets.xcassets */,
 				F1B2BD2D2A56AFCC00D61EF8 /* LaunchScreen.storyboard */,
-				F1B2BD3C2A56B67400D61EF8 /* RemoteConfigDefaults.plist */,
 				F1B2BD302A56AFCC00D61EF8 /* Info.plist */,
 				F1B2BD402A56C18600D61EF8 /* GoogleService-Info.plist */,
 			);
