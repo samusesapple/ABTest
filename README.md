@@ -106,18 +106,60 @@ Firebase를 이용한 RemoteConfig 기능 학습
 # AB Test
 ### 목적
 ---
-Firebase를 이용한 AB Test 학습
+Firebase를 이용한 AB Test 기능 학습
 <br>
 <br>
 
-### Test 주제
-메세지 문구에 따른 사용자의 확인버튼 탭 빈도수 비교 실험
+### Test 대상
+얼럿창 상의 메세지 문구에 따른 사용자의 '이벤트 보기'버튼 탭 빈도수 비교 실험
 <br>
 <br>
 
-### 실험 비교 케이스 선정
+### 비교군, 대조군 생성
 <img width="787" alt="image" src="https://github.com/samusesapple/RemoteConfig-ABTest/assets/126672733/a89e7e23-927a-419c-b4fa-148c22ab41ab">
+<br>
+<br>
 
-  
+### 테스트 실행 코드
+MainVC를 확장하여 얼럿창 테스트하는 메서드 추가
+```
+func presentEventAlert() {
+        guard let remoteConfig = remoteConfig else { return }
+        
+        remoteConfig.fetch { status, _ in
+            switch status {
+            case .success:
+                remoteConfig.activate()
+            case .failure:
+                print("ERROR: Failed fetching remoteConfig")
+            default:
+                break
+            }
+            
+            
+            let message = remoteConfig["message"].stringValue ?? ""
+            let alert = UIAlertController(title: "깜짝 이벤트",
+                                          message: message,
+                                          preferredStyle: .alert)
+            
+            let confirmAction = UIAlertAction(title: "이벤트 보기",
+                                              style: .default) { _ in
+                Analytics.logEvent("event_message", parameters: nil)
+            }
+            let cancelAction = UIAlertAction(title: "취소",
+                                             style: .cancel)
+            
+            [confirmAction, cancelAction].forEach(alert.addAction)
+            
+            self.present(alert, animated: true)
+        }
+    }
+```
+<br>
+<br>
 
-
+### 실험군, 대조군 반영 화면
+<img width="447" alt="image" src="https://github.com/samusesapple/RemoteConfig-ABTest/assets/126672733/7a0a74b8-2100-435f-ac09-623aeb7e96d9">!
+<img width="230" alt="image" src="https://github.com/samusesapple/RemoteConfig-ABTest/assets/126672733/604bbd11-aa6b-41f4-87f5-cf017469c39c">
+<img width="447" alt="image" src="https://github.com/samusesapple/RemoteConfig-ABTest/assets/126672733/59604e1c-0434-4e15-a2c5-dc5f491912d0">
+<img width="230" alt="image" src="https://github.com/samusesapple/RemoteConfig-ABTest/assets/126672733/599a398e-b898-44e0-b679-d850a79a60d8">
