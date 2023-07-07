@@ -100,7 +100,7 @@ extension ViewController {
                                           message: message,
                                           preferredStyle: .alert)
             
-            let confirmAction = UIAlertAction(title: "확인하기",
+            let confirmAction = UIAlertAction(title: "이벤트 보기",
                                               style: .default) { _ in
                 Analytics.logEvent("event_message", parameters: nil)
             }
